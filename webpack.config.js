@@ -76,7 +76,7 @@ export default {
 
 
   plugins: [
-    new HTTPServerWebpackPlugin({ staticDir: 'frontend', indexFile: 'index.html', port: 8100, timeout: 300000, acceptEncoding: 'gzip', debug: false })
+    new HTTPServerWebpackPlugin({ staticDir: 'frontend', indexFile: 'index.html', port: 9000, timeout: 300000, acceptEncoding: 'gzip', debug: false })
   ]
 
 };
