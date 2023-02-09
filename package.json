@@ -1,0 +1,33 @@
+{
+  "name": "create-dodo-boilerplates",
+  "version": "1.0.0",
+  "title": "Create Dodo Boilerplates",
+  "description": "Boilerplate code for a new project made in DoDo Framework.",
+  "author": "Mikodanic Sasa <smikodanic@gmail.com>",
+  "homepage": "http://dodo.mikosoft.info",
+  "license": "MIT",
+  "keywords": [
+    "dodo boilerplate"
+  ],
+  "type": "module",
+  "scripts": {
+    "inst": "rm -rf node_modules && rm package-lock.json && npm install",
+    "dev": "npx webpack --config webpack.config.js",
+    "dev-server": "nodemon backend/server.js",
+    "prod-inst": "rm -rf node_modules && rm package-lock.json && npm install --production",
+    "prod": "pm2 start server --name dodo-app"
+  },
+  "dependencies": {
+    "@mikosoft/dodo": "../dodo",
+    "@mikosoft/spa-server": "^1.0.0"
+  },
+  "devDependencies": {
+    "esbuild-loader": "^2.19.0",
+    "file-loader": "^6.2.0",
+    "html-loader": "^4.2.0",
+    "node-sass": "^8.0.0",
+    "sass-loader": "^13.2.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0"
+  }
+}

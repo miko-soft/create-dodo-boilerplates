@@ -1,0 +1,33 @@
+@import './styles/navbar.scss';
+@import './styles/footer.scss';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fcfcfc;
+}
+
+main {
+  font: 21px Arial;
+  padding: 34px 55px;
+
+  & b {
+    color: maroon;
+  }
+}
+
+main>h1 {
+  font-family: Verdana;
+  color: #3769a6;
+}
+
+p.image>img {
+  width: 130px;
+}
+
+pre {
+  border: 1px dashed Silver;
+  padding: 3px;
+}
