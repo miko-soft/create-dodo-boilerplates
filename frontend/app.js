@@ -1,48 +1,25 @@
-import { App, corelib } from '@mikosoft/dodo';
-import views from './views.js';
-import env from './app/envs/development.env.js';
-console.log('env::', env);
-// console.log('views::', views);
-
+import { App } from '@mikosoft/dodo';
 
 // conf
-import { $debugOpts, authOpts } from './app/conf/index.js';
-
-
+import { $debugOpts, $viewsCached, $auth, $httpClient, $routes } from './app/conf/index.js';
 
 // controllers
 import HomeCtrl from './app/controllers/HomeCtrl.js';
 import Page1Ctrl from './app/controllers/Page1Ctrl.js';
 import NotfoundCtrl from './app/controllers/NotfoundCtrl.js';
 
-
-// routes
-const routes = [
-  ['when', '/', 'HomeCtrl'],
-  ['when', '/page1', 'Page1Ctrl'],
-  ['notfound', 'NotfoundCtrl']
-];
-
-// auth
-const auth = new corelib.Auth(authOpts);
-
 // app
-const app = new App();
-
-
+const app = new App($debugOpts);
 app
   .controllers([
     HomeCtrl,
     Page1Ctrl,
     NotfoundCtrl
-  ]);
+  ])
+  .httpClient($httpClient)
+  .auth($auth) // needed for route authGuards
+  .viewsCached($viewsCached);
 
-app
-  .auth(auth) // needed for route authGuards
-  .debugger($debugOpts);
-
-app
-  .routes(routes)
-  .viewsCached(views);
+app.routes($routes).listen();
 
 

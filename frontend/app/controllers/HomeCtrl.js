@@ -6,7 +6,7 @@ export default class HomeCtrl extends Controller {
     super();
   }
 
-  async loader(trx) {
+  async __loader(trx) {
     this.setTitle('DoDo - JS Single Page App Framework');
     this.setDescription('DoDo is JS framework for single page applications which runs in a browser.');
     this.setKeywords('dodo, framework, javascript, js, single page app, spa');
@@ -14,8 +14,7 @@ export default class HomeCtrl extends Controller {
     await this.loadView('#main', 'pages/home/main.html');
   }
 
-
-  async init(trx) {
+  async __init(trx) {
     console.log('init() -- trx::', trx);
     console.log('init() -- navig::', corelib.navig);
     console.log('init() -- ctrl::', this);
@@ -23,17 +22,17 @@ export default class HomeCtrl extends Controller {
   }
 
   // if rend() is not defined then this.render() is used
-  async rend(trx) {
+  async __rend(trx) {
     console.log('rend() -- trx::', trx);
-    await this.ddKILL();
+    await this.ddUNLISTEN();
     this.ddHref();
   }
 
-  async postrend(trx) {
+  async __postrend(trx) {
     console.log('postrend() -- trx::', trx);
   }
 
-  async destroy(trx) {
+  async __destroy(trx) {
     console.log('destroy() -- trx::', trx);
     console.log('destroy() -- navig::', corelib.navig);
     console.log('destroy() -- ctrl::', this);

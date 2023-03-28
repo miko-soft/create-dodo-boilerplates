@@ -3,8 +3,8 @@ const $debugOpts = {
   warnings: false,
 
   // Router
-  router: false,
-  dodoRouter: false,
+  appRouter: true,
+  router: true,
 
   // Controller.js
   render: false,
