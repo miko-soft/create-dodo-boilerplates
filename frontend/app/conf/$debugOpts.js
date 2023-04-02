@@ -1,50 +1,50 @@
 const $debugOpts = {
-  // general
-  warnings: false,
-
-  // Router
-  appRouter: true,
-  router: true,
+  // App.js
+  exeRoute: false,
 
   // Controller.js
   render: false,
-  navig: false,
+
+  // Model.js
+  model: false,
 
   // View.js
   ddInc: false,
   loadView: false,
   emptyView: false,
-  loadHead: false,
   ddLazyjs: false,
+  loadHead: false,
 
-  // DataDd.js
-  ddFor: false,
-  ddRepeat: false,
-  ddPrint: false,
-
-  ddIf: false,
-  ddSpinner: false,
-  ddSwitch: false,
-  ddDisabled: false,
+  // Dd.js
+  ddSetinitial: false,
+  ddElem: false,
   ddValue: false,
+  ddShow: false,
+  // attribute managers
+  ddDisabled: false,
   ddChecked: false,
   ddClass: false,
   ddStyle: false,
   ddSrc: false,
   ddAttr: false,
-  ddElem: false,
-  ddEcho: false,
 
-  // DataDdListeners.js
-  ddKILL: false,
+  // DdCloners.js
+  ddForeach: false,
+  ddRepeat: false,
+  ddIf: false,
+  ddText: false,
+  ddHtml: false,
+  ddMustache: false,
+
+  // DdListeners.js
+  ddUNLISTEN: false,
   ddHref: false,
+  ddSet: false,
+  ddModel: false,
   ddClick: false,
   ddKeyup: false,
   ddChange: false,
-  ddEvt: false,
-  ddSet: false,
-  ddSetInitial: false,
-  ddModel: false
+  ddEvt: false
 };
 
 export { $debugOpts };

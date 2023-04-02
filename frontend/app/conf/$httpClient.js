@@ -4,6 +4,7 @@ import { corelib } from '@mikosoft/dodo';
 const opts = {
   encodeURI: true,
   timeout: 21000,
+  responseType: '', // 'blob' for file download (https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/responseType)
   retry: 0,
   retryDelay: 1300,
   maxRedirects: 0,
