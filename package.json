@@ -18,7 +18,7 @@
     "prod": "pm2 start server --name dodo-app"
   },
   "dependencies": {
-    "@mikosoft/dodo": "../dodo",
+    "@mikosoft/dodo": "^0.7.0",
     "@mikosoft/spa-server": "^1.0.0"
   },
   "devDependencies": {
