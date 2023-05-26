@@ -1,14 +1,13 @@
 /**
- * Run "npx webpack --config webpack.config.js" from the project's root folder.
+ * Run "npx webpack --config webpack.production.config.js" from the project's root folder.
  */
 import path from 'path';
 import { ESBuildMinifyPlugin } from 'esbuild-loader';
-import HTTPServerWebpackPlugin from './backend/HTTPServerWebpackPlugin.js';
 
 
 export default {
   mode: 'production',
-  stats: { warnings: true },
+  stats: { warnings: false },
 
   entry: {
     'app': './frontend/app.js',
@@ -34,7 +33,7 @@ export default {
           },
           {
             loader: 'sass-loader',
-            options: { implementation: 'node-sass', sourceMap: true }
+            options: { implementation: 'sass', sourceMap: true }
           }
         ]
       }, {
@@ -66,17 +65,7 @@ export default {
   },
 
 
-  // watcher
-  watch: true,
-  watchOptions: {
-    aggregateTimeout: 200,
-    poll: 1000,
-    ignored: ['node_modules', 'backend']
-  },
-
-
-  plugins: [
-    new HTTPServerWebpackPlugin({ staticDir: 'frontend', indexFile: 'index.html', port: 9000, timeout: 300000, acceptEncoding: 'gzip', debug: false })
-  ]
+  // no watcher
+  watch: false
 
 };
