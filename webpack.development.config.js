@@ -34,7 +34,7 @@ export default {
           },
           {
             loader: 'sass-loader',
-            options: { implementation: 'node-sass', sourceMap: true }
+            options: { implementation: 'sass', sourceMap: true }
           }
         ]
       }, {
