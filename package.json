@@ -15,18 +15,14 @@
     "dev": "npx vite --config vite.config.js",
     "build": "npx vite build",
     "server": "export PORT=9000 && pm2 start server --name dodo-app",
-    "test": "nodemon server"
+    "nodemon": "nodemon server"
   },
   "dependencies": {
     "@mikosoft/dodo": "../dodo",
     "@mikosoft/spa-server": "../spa-server"
   },
   "devDependencies": {
-    "esbuild-loader": "^2.19.0",
-    "file-loader": "^6.2.0",
-    "html-loader": "^4.2.0",
     "sass": "^1.62.1",
-    "sass-loader": "^13.2.0",
     "vite": "^4.3.9"
   }
 }
