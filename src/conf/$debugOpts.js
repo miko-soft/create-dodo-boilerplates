@@ -11,7 +11,7 @@ const $debugOpts = {
   // View.js
   ddInc: false,
   loadView: false,
-  emptyView: false,
+  unloadView: false,
   ddLazyjs: false,
   loadHead: false,
 

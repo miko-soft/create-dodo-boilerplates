@@ -1,4 +1,9 @@
 import { Controller, corelib } from '@mikosoft/dodo';
+import navbar from '../views/inc/navbar.html?raw';
+import homeMain from '../views/pages/home/main.html?raw';
+import footer from '../views/inc/footer.html?raw';
+
+
 
 export default class HomeCtrl extends Controller {
 
@@ -11,9 +16,9 @@ export default class HomeCtrl extends Controller {
     this.setDescription('DoDo is JS framework for single page applications.');
     this.setKeywords('dodo, framework, javascript, js, single page app, spa');
     this.setLang('en');
-    await this.loadView('#navbar', 'inc/navbar.html');
-    await this.loadView('#main', 'pages/home/main.html');
-    await this.loadView('#footer', 'inc/footer.html');
+    await this.loadView('#navbar', navbar);
+    await this.loadView('#main', homeMain);
+    await this.loadView('#footer', footer);
   }
 
   async __init(trx) {
@@ -38,7 +43,7 @@ export default class HomeCtrl extends Controller {
     console.log('destroy() -- navig::', corelib.navig);
     console.log('destroy() -- ctrl::', this);
     this.unloadCSS(['https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-coy.min.css']);
-    this.unlazyJS();
+    this.unloadJS();
   }
 
 }
