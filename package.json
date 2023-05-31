@@ -1,6 +1,6 @@
 {
   "name": "create-dodo-boilerplates",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "title": "Create Dodo Boilerplates",
   "description": "Boilerplate code for a new project made in DoDo Framework.",
   "author": "Mikodanic Sasa <smikodanic@gmail.com>",
@@ -14,12 +14,12 @@
     "inst": "rm -rf node_modules && rm package-lock.json && npm install",
     "dev": "npx vite --config vite.config.js",
     "build": "npx vite build",
-    "server": "export PORT=9000 && pm2 start server --name dodo-app",
+    "server": "export PORT=9000 && pm2 start server/index.js --name dodo-app",
     "nodemon": "nodemon server"
   },
   "dependencies": {
-    "@mikosoft/dodo": "../dodo",
-    "@mikosoft/spa-server": "../spa-server"
+    "@mikosoft/dodo": "~0.8.0",
+    "@mikosoft/spa-server": "^1.2.0"
   },
   "devDependencies": {
     "sass": "^1.62.1",

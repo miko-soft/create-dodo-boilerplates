@@ -4,7 +4,7 @@ import { HTTPServer } from '@mikosoft/spa-server';
 const httpOpts = {
   staticDir: 'dist',
   indexFile: 'index.html',
-  openDirs: '',
+  urlRewrite: {},
   port: process.env.PORT || 3000,
   timeout: 5 * 60 * 1000, // if 0 never timeout
   acceptEncoding: 'gzip', // gzip, deflate or ''
