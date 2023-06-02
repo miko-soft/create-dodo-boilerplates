@@ -13,6 +13,7 @@
   "scripts": {
     "inst": "rm -rf node_modules && rm package-lock.json && npm install",
     "dev": "npx vite --config vite.config.js",
+    "prod": "vite --config vite.config.js --mode production",
     "build": "npx vite build",
     "server": "export PORT=9000 && pm2 start server/index.js --name dodo-app",
     "nodemon": "nodemon server"

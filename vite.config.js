@@ -3,7 +3,9 @@ import { defineConfig } from 'vite';
 export default defineConfig({
   root: 'src',
   mode: 'development',
-  publicDir: 'public',
+  publicDir: 'public', // relative to root
+  envDir: '', // relative to root
+  envPrefix: 'DODO_',
   logLevel: 'info',
   clearScreen: true,
   appType: 'spa',
