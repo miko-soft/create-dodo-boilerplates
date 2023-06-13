@@ -1,6 +1,6 @@
 nav {
   text-align: center;
-  background: #99aaff;
+  background: #2a5c96;
   padding: 5px;
   border-bottom: 1px solid Gray;
 
@@ -11,14 +11,14 @@ nav {
 
   &>a {
     float: left;
-    color: rgb(0, 110, 255);
+    color: #ccc;
     margin-right: 21px;
     text-decoration: none;
     font: 18px Verdana;
     font-weight: bold;
 
     &:hover {
-      color: orangered;
+      color: orange;
     }
   }
 }
