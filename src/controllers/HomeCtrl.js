@@ -16,9 +16,9 @@ export default class HomeCtrl extends Controller {
     this.setDescription('DoDo is JS framework for single page applications.');
     this.setKeywords('dodo, framework, javascript, js, single page app, spa');
     this.setLang('en');
-    await this.loadView('#navbar', navbar);
-    await this.loadView('#main', homeMain);
-    await this.loadView('#footer', footer);
+    this.loadView('#navbar', navbar);
+    this.loadView('#main', homeMain);
+    this.loadView('#footer', footer);
   }
 
   async __init(trx) {

@@ -16,9 +16,9 @@ export default class Page1Ctrl extends Controller {
     this.setDescription('DoDo is JS framework for single page applications which runs in a browser.');
     this.setKeywords('dodo, framework, javascript, js, single page app, spa');
     this.setLang('en');
-    await this.loadView('#navbar', navbar);
-    await this.loadView('#main', page1Main);
-    await this.loadView('#footer', footer);
+    this.loadView('#navbar', navbar);
+    this.loadView('#main', page1Main);
+    this.loadView('#footer', footer);
   }
 
 }

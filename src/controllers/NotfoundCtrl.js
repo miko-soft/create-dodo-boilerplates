@@ -9,9 +9,9 @@ export default class NotfoundCtrl extends Controller {
 
   async __loader(trx) {
     this.setTitle('DoDo - NOT FOUND');
-    await this.loadView('#navbar', navbar);
-    await this.loadView('#main', notfoundMain);
-    await this.loadView('#footer', footer);
+    this.loadView('#navbar', navbar);
+    this.loadView('#main', notfoundMain);
+    this.loadView('#footer', footer);
   }
 
   async __postrend(trx) {
