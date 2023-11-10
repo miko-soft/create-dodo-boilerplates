@@ -13,10 +13,8 @@ $ npm init dodo
 ```bash
 $ cd [projectName]
 $ npm install   or   $ npm run inst
-$ npm run dev
+$ npm run start
 ```
-The file changes are watched and automatically bundled in */frontend/_dist/* folder.
-Open the app in browser: http://localhost:3001
 
 
 ## Boilerplates
