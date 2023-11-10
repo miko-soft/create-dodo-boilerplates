@@ -1,12 +1,11 @@
 {
   "name": "create-dodo-boilerplates-desktop-electronforge",
-  "productName": "desktop-electronforge",
+  "productName": "create-dodo-boilerplates-desktop-electronforge",
   "version": "0.8.10",
   "description": "Initiate the development of desktop applications using the Dodo framework with ElectronJS Forge integration.",
   "main": ".vite/build/main.js",
   "scripts": {
     "inst": "rm -rf node_modules && npm install",
-    "dev": "electron .",
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
@@ -18,14 +17,10 @@
     "electronjs",
     "electron forge"
   ],
-  "author": {
-    "name": "",
-    "email": ""
-  },
   "license": "MIT",
   "dependencies": {
-    "@mikosoft/dodo": "~0.8.10",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "@mikosoft/dodo": "~0.8.10"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.4.2",

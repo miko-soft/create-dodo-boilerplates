@@ -29,5 +29,11 @@ The DoDo Framework boilerplates are placed in different repository branches:
 Tutorials and API documentation at [http://dodo.mikosoft.info](http://dodo.mikosoft.info)
 
 
+## NOTICE
+ - In the package.json the "name" and "productName" must have same value or this error will occur on command *$npm run make*:
+ ```An unhandled rejection has occurred inside Forge: Error: could not find the Electron app binary at ...
+ ```
+
+
 ### Licence
 Copyright (c) MikoSoft licensed under [MIT](./LICENSE).
