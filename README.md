@@ -33,5 +33,26 @@ Tutorials and API documentation at [http://dodo.mikosoft.info](http://dodo.mikos
  ```
 
 
+### Firebase Hosting
+Deploying a Dodo App on Firebase Hosting is a straightforward and user-friendly process.
+Do the following commands from the project's root folder:
+```
+$ npm run build     - this will create /dist/ folder with index.html
+
+$ firebase init
+  - Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys [select this option]
+  - What do you want to use as your public directory? [dist]
+  - Configure as a single-page app (rewrite all urls to /index.html)? [y]
+  - Set up automatic builds and deploys with GitHub? [N]
+  - File dist/index.html already exists. Overwrite? [N]  -- if [y] then Firebase welcome page will be shown
+
+$ firebase deploy
+  Project Console: https://console.firebase.google.com/project/dodo-examples/overview
+  Hosting URL: https://dodo-examples.web.app
+```
+
+
+
+
 ### Licence
 Copyright (c) MikoSoft licensed under [MIT](./LICENSE).
