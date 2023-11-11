@@ -3,6 +3,7 @@
   "productName": "dodo-desktop-electronforge",
   "version": "1.0.0",
   "description": "Initiate the development of desktop applications using the Dodo framework with ElectronJS Forge integration.",
+  "author": "Firstname Lastname",
   "main": ".vite/build/main.js",
   "scripts": {
     "inst": "rm -rf node_modules && npm install",
@@ -17,11 +18,10 @@
     "electronjs",
     "electron forge"
   ],
-  "author": "Firstname Lastname",
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "@mikosoft/dodo": "~0.8.10"
+    "@mikosoft/dodo": "~0.8.11"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.4.2",
