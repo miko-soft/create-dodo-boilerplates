@@ -8,7 +8,6 @@ To start a new project is very straightforward
 $ npm init dodo
 ```
 
-
 ## Development
 ```bash
 $ cd [projectName]
@@ -21,7 +20,8 @@ Open the app in browser: http://localhost:3001
 
 ## Boilerplates
 The DoDo Framework boilerplates are placed in different repository branches:
-- master -- default boilerplate code
+- **spa** -- *Single Page App* - Effortlessly begin building browser-based Single Page Application (SPA)
+- **desktop-electronforge** -- *ElectronJS Desktop App* - Initiate the development of desktop applications using the Dodo framework with ElectronJS Forge integration.
 
 
 ## Documentation
