@@ -6,12 +6,14 @@
   "author": "Firstname Lastname",
   "main": ".vite/build/main.js",
   "scripts": {
-    "inst": "rm -rf node_modules && npm install",
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
+    "inst": "rm -rf node_modules && rm package-lock.json && npm install",
+    "dev": "npx vite --config vite.renderer.config.mjs",
+    "prod": "npx vite --config vite.renderer.config.mjs --mode production",
+    "build": "npx vite build --mode production"
   },
   "keywords": [
     "dodo framework",
