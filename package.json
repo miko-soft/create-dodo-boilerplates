@@ -1,5 +1,5 @@
 {
-  "name": "dodo-spa",
+  "name": "create-dodo-boilerplates",
   "version": "1.0.0",
   "title": "Create Dodo Boilerplates",
   "description": "Boilerplate code for a new project made in DoDo Framework.",
@@ -20,11 +20,11 @@
     "nodemon": "nodemon server"
   },
   "dependencies": {
-    "@mikosoft/dodo": "~0.8.11",
+    "@mikosoft/dodo": "~0.8.17",
     "@mikosoft/spa-server": "^1.2.0"
   },
   "devDependencies": {
     "sass": "^1.62.1",
-    "vite": "^4.3.9"
+    "vite": "^4.5.2"
   }
 }
