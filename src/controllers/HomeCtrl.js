@@ -1,6 +1,7 @@
 import { Controller, corelib } from '@mikosoft/dodo';
 import navbar from '../views/inc/navbar.html?raw';
-import homeMain from '../views/pages/home/main.html?raw';
+import mainHome from '../views/pages/mainHome.html?raw';
+import mainPage1 from '../views/pages/mainPage1.html?raw';
 import footer from '../views/inc/footer.html?raw';
 
 
@@ -11,39 +12,39 @@ export default class HomeCtrl extends Controller {
     super();
   }
 
-  async __loader(trx) {
-    this.setTitle('DoDo - Single Page App Framework');
+  // trx argument is undefined because there's no router
+  async __loader() {
+    this.setTitle('DoDo - App One');
     this.setDescription('DoDo is JS framework for single page applications.');
     this.setKeywords('dodo, framework, javascript, js, single page app, spa');
     this.setLang('en');
     this.loadView('#navbar', navbar);
-    this.loadView('#main', homeMain);
+    this.loadView('#main', mainHome);
     this.loadView('#footer', footer);
   }
 
-  async __init(trx) {
-    console.log('init() -- trx::', trx);
-    console.log('init() -- navig::', corelib.navig);
+  async __init() {
     console.log('init() -- ctrl::', this);
-    this.something = 'smthng';
   }
 
-  // if rend() is not defined then this.render() is used
-  // async __rend(trx) {
-  //   console.log('rend() -- trx::', trx);
-  //   await this.ddUNLISTEN();
-  //   this.ddHref();
-  // }
-
-  async __postrend(trx) {
-    console.log('postrend() -- trx::', trx);
+  async __postrend() {
   }
 
-  async __destroy() {
-    console.log('destroy() -- navig::', corelib.navig);
-    console.log('destroy() -- ctrl::', this);
-    this.unloadCSS(['https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism-coy.min.css']);
-    this.unloadJS();
+
+  openView(viewName) {
+    // this.emptyView('#main');
+    if (viewName === 'home') {
+      this.loadView('#main', mainHome);
+    } else if (viewName === 'page1') {
+      this.loadView('#main', mainPage1);
+      this.fetchPosts();
+    }
+
+  }
+
+  async fetchPosts() {
+    const answer = await this.$httpClient.askJSON('https://jsonplaceholder.typicode.com/posts');
+    this.$model.posts = answer.res.content || [];
   }
 
 }
