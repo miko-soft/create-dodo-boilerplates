@@ -16,16 +16,24 @@
       2) Open <a href="http://dodo.mikosoft.info" target="_blank">http://dodo.mikosoft.info</a> and
       <br>change background color.
       <br>
-      <button class="btn btn-outline-primary" dd-click="changeBackground()">
-        <i class="fa fa-edit"></i>
-        Change background
-      </button>
+      <label for="colorSelect" class="form-label">Choose a color:</label>
+      <div class="d-flex align-items-center">
+        <select id="colorSelect" class="form-select w-50" dd-set="bkgColor" dd-setinitial="bkgColor">
+          <option value="">default</option>
+          <option value="red">red</option>
+          <option value="green" selected>green</option>
+          <option value="orange">orange</option>
+        </select>
+        <button class="btn btn-sm btn-outline-primary ms-2" dd-click="changeBackgroundColor()">
+          <i class="fa fa-edit"></i> Change background
+        </button>
+      </div>
       <br><small style="color:#999">action/popup to content_scripts/foreground</small>
 
       <br>
       <hr>
       <br>
-      <p dd-text="$model.infoMsg" style="color:green"></p>
+      <p dd-html="$model.infoMsg" style="color:green"></p>
 
     </div>
   </div>

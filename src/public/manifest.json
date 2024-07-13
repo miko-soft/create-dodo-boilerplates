@@ -12,7 +12,7 @@
     {
       "type": "module",
       "matches": [
-        "https://www.mikosoft.info/*"
+        "http://dodo.mikosoft.info/*"
       ],
       "exclude_matches": [],
       "js": [

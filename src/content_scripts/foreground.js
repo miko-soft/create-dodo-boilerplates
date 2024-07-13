@@ -1,6 +1,18 @@
+import messenger from '../_libs/messenger.js';
+
 console.log('[content_scripts/foreground.js] - forground script works !');
 
-chrome.runtime.onMessage.addListener(async (request, sender, sendResponse) => {
+
+messenger.listenMsgs(async (request, sender, sendResponse) => {
   console.log('[foreground.js] request::', request, 'sender::', sender);
-  // sendResponse({ success: true, request }); // return message back to sender
+  const route = request.route;
+  const payload = request.payload;
+
+  if (route === '/content_scripts/foreground/change-background-color') {
+    sendResponse({ success: true, msg: `Background color changed to "${payload}"` });
+
+    const elem = document.body;
+    elem.style.backgroundColor = payload;
+  }
+
 });
