@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-12">
+    <h1 class="text-center">Dodo Chrome Extension</h1>
+    <div class="text-center">
+
+      1) Call the API endpoint
+      <br>
+      <button class="btn btn-outline-primary" dd-click="callAPIendpoint()">
+        <i class="fa fa-wifi"></i>
+        Call API endpoint
+      </button>
+      <br><small style="color:#999">action/popup to background/service_worker</small>
+
+      <br><br>
+
+      2) Open <a href="http://dodo.mikosoft.info" target="_blank">http://dodo.mikosoft.info</a> and
+      <br>change background color.
+      <br>
+      <button class="btn btn-outline-primary" dd-click="changeBackground()">
+        <i class="fa fa-edit"></i>
+        Change background
+      </button>
+      <br><small style="color:#999">action/popup to content_scripts/foreground</small>
+
+      <br>
+      <hr>
+      <br>
+      <p dd-text="$model.infoMsg" style="color:green"></p>
+
+    </div>
+  </div>
+</div>

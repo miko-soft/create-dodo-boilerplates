@@ -3,48 +3,34 @@
 
 
 ## Installation
-To start a new project is very straightforward
+To start a new chrome extension project is very straightforward
 ```bash
 $ npm init dodo
 ```
+Select "Chrome Extension" option.
 
-## Development
+
+## Action Popup Development
 ```bash
-$ cd [projectName]
-$ npm install   or   $ npm run inst
-$ npm run dev
+$ npm run dev-action
 ```
-The file changes are watched and automatically bundled in */frontend/_dist/* folder.
-Open the app in browser: http://localhost:3001
+Open the app in browser: http://127.0.0.1:9888/action/popup.html
 
 
-## Boilerplates
-The DoDo Framework boilerplates are placed in different repository branches:
-- **spa** -- *Single Page App* - Effortlessly begin building browser-based Single Page Application (SPA)
-- **desktop-electronforge** -- *ElectronJS Desktop App* - Initiate the development of desktop applications using the Dodo framework with ElectronJS Forge integration.
-
-
-## Documentation
-Tutorials and API documentation at [http://dodo.mikosoft.info](http://dodo.mikosoft.info)
-
-
-### Firebase Hosting
-Deploying a Dodo App on Firebase Hosting is a straightforward and user-friendly process.
-Do the following commands from the project's root folder:
+## Options Development
+```bash
+$ npm run dev-options
 ```
-$ npm run build     - this will create /dist/ folder with index.html
+Open the app in browser: http://127.0.0.1:9888/options/opt.html
 
-$ firebase init
-  - Hosting: Configure files for Firebase Hosting and (optionally) set up GitHub Action deploys [select this option]
-  - What do you want to use as your public directory? [dist]
-  - Configure as a single-page app (rewrite all urls to /index.html)? [y]
-  - Set up automatic builds and deploys with GitHub? [N]
-  - File dist/index.html already exists. Overwrite? [N]  -- if [y] then Firebase welcome page will be shown
 
-$ firebase deploy
-  Project Console: https://console.firebase.google.com/project/dodo-examples/overview
-  Hosting URL: https://dodo-examples.web.app
+## Build
+To build complete chrome extension run:
+```bash
+$ npm run build
 ```
+After succesful build, open chrome://extensions and upload the content of /dist/ folder.
+
 
 
 ### Licence

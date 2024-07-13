@@ -1,6 +1,9 @@
 {
 	"globals": {
-    "dodoGlob": true
+    "$": true,
+    "chrome": true,
+    "importScripts": true,
+    "getTabId": true
 	},
 	"env": {
 		"browser": true,
@@ -24,7 +27,7 @@
     "no-template-curly-in-string": 0
 	},
 	"parserOptions": {
-		"ecmaVersion": 13,
+		"ecmaVersion": 2021,
     "sourceType": "module"
  	}
 }

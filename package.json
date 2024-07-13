@@ -12,16 +12,17 @@
   ],
   "type": "module",
   "scripts": {
-    "inst": "rm -rf node_modules && rm package-lock.json && npm install",
-    "dev": "npx vite --config vite.config.js",
-    "prod": "npx vite --config vite.config.js --mode production",
-    "build": "npx vite build --mode production",
-    "server": "export PORT=9000 && pm2 start server/index.js --name dodo-app",
-    "nodemon": "nodemon server"
+    "inst": "rm -rf node_modules && npm install",
+    "inst-win": "rmdir /S /Q node_modules && del package-lock.json && npm install",
+    "dev-action": "npx vite --config vite.action.js",
+    "dev-options": "npx vite --config vite.options.js",
+    "build": "vite build --config vite.options.js && vite build --config vite.action.js && vite build --config vite.content_scripts.js && vite build --config vite.background.js"
   },
   "dependencies": {
-    "@mikosoft/dodo": "~0.9.0",
-    "@mikosoft/spa-server": "^1.2.0"
+    "@mikosoft/dodo": "file:../dodo",
+    "bootstrap": "^5.3.3",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.7.1"
   },
   "devDependencies": {
     "sass": "^1.62.1",
