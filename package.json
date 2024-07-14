@@ -16,7 +16,7 @@
     "inst-win": "rmdir /S /Q node_modules && del package-lock.json && npm install",
     "dev-action": "npx vite --config vite.action.js",
     "dev-options": "npx vite --config vite.options.js",
-    "build": "vite build --config vite.options.js && vite build --config vite.action.js && vite build --config vite.content_scripts.js && vite build --config vite.background.js"
+    "build": "vite build --config vite.options.js && vite build --config vite.action.js && vite build --config vite.content_scripts.js && vite build --config vite.background.js && vite build --config vite.dodoApp.js"
   },
   "dependencies": {
     "@mikosoft/dodo": "file:../dodo",

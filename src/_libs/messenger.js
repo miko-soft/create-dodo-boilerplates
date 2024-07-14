@@ -34,7 +34,7 @@ const sendMsg = async (message, destination) => {
  * Listen for a chrome messages.
  */
 const listenMsgs = (cb) => {
-  chrome.runtime.onMessage.addListener(cb);
+  chrome.runtime?.onMessage.addListener(cb);
 };
 
 

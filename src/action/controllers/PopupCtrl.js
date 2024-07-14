@@ -31,6 +31,8 @@ export default class PopupCtrl extends Controller {
     });
 
     this.chromeStorage = new ChromeStorage('local');
+
+    this.dodoApp_url = chrome.runtime.getURL('/dodoApp/index.html');
   }
 
 
