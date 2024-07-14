@@ -31,8 +31,6 @@ export default class PopupCtrl extends Controller {
     });
 
     this.chromeStorage = new ChromeStorage('local');
-
-    this.dodoApp_url = chrome.runtime.getURL('/dodoApp/index.html');
   }
 
 
@@ -67,6 +65,14 @@ export default class PopupCtrl extends Controller {
     this.$model.infoMsg = msg;
     await corelib.util.sleep(3400);
     this.$model.infoMsg = '';
+  }
+
+
+  // open dodoApp in a new browser tab (ordinary link will not open in a new tab)
+  openNewTab() {
+    const url = chrome.runtime.getURL('/dodoApp/index.html'); // will give chrome-extension://lmnlabgbdgbpmdmmgbpoiblflnhdbeeh/dodoApp/index.html
+    console.log('dodoApp URL:', url);
+    chrome.tabs.create({ url });
   }
 
 

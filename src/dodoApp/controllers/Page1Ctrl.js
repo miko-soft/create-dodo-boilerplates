@@ -21,4 +21,21 @@ export default class Page1Ctrl extends Controller {
     this.loadView('#footer', footer);
   }
 
+
+  async __init() {
+    this.$model.results = [];
+  }
+
+
+  async sendRequest() {
+    const apiResp = await this.$httpClient.askJSON(this.api_url);
+    this.$model.results = apiResp.res.content || [];
+    console.log('results::', this.$model.results);
+  }
+
+  ddHtml_results(key) {
+    const r = this.$model.results[key];
+    return `${r.id} - title: <b>${r.title}</b> - completed: ${r.completed}`;
+  }
+
 }

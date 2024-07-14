@@ -5,11 +5,11 @@ html,
 body {
   margin: 0;
   padding: 0;
-  height: 100%;
   background: #fcfcfc;
 }
 
 main {
+  min-height: 550px;
   font: 21px Arial;
   padding: 34px 55px;
 

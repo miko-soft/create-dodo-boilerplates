@@ -1,2 +1,14 @@
 <h1>Page 1</h1>
-<p><b>Router Works</b> really good !</p>
+<p style="text-align:center"><b>Router Works</b> really good !</p>
+
+<br><br><br>
+<p>
+  API URL: <input type="text" name="api_url" value="https://jsonplaceholder.typicode.com/todos" style="width:40%;" dd-set="api_url" dd-setinitial="api_url">
+  <button type="button" dd-click="sendRequest()">SEND</button>
+</p>
+
+<br><br><br>
+RESULTS:
+<ul>
+  <li dd-each="$model.results --result, key" dd-html="ddHtml_results({{key}})"></li>
+</ul>
