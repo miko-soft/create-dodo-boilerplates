@@ -5,16 +5,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Options</title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-eval'; script-src 'self' 'unsafe-eval'; style-src 'self' 'unsafe-inline';">
-  <link rel="stylesheet" type="text/css" href="../../node_modules/bootstrap/dist/css/bootstrap.css">
-  <link rel="stylesheet" type="text/css" href="../../node_modules/font-awesome/css/font-awesome.css">
   <link rel="stylesheet" type="text/css" href="./opt.scss">
 </head>
 
 <body>
-  <div dd-view="#options"></div>
+  <div class="container mt-5">
+    <h1><i class="fa fa-cog"></i> &nbsp; OPTIONS</h1>
+    <form dd-form="optionsForm">
+      <div class="mb-5">
+        <label for="opt1" class="form-label">Option 1</label>
+        <input type="text" class="form-control" id="opt1" name="opt1">
+      </div>
+
+      <div class="mb-5">
+        <label for="opt2" class="form-label">Select Option 2</label>
+        <select id="opt2" name="opt2" class="form-select">
+          <option value="" selected></option>
+          <option value="select_1">select 1</option>
+          <option value="select_2">select 2</option>
+          <option value="select_3">select 3</option>
+        </select>
+      </div>
+
+      <div class="mb-5">
+        <label class="form-label">Select Option 3</label>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="opt3" id="radio1" value="radio_1">
+          <label class="form-check-label" for="radio1">
+            Radio Option 1
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="opt3" id="radio2" value="radio_2">
+          <label class="form-check-label" for="radio2">
+            Radio Option 2
+          </label>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="opt4" name="opt4" value="checkbox_1">
+          <label class="form-check-label" for="opt4">
+            Checkbox Option 4
+          </label>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <label for="opt5" class="form-label">Textarea Option 5</label>
+        <textarea class="form-control" id="opt5" name="opt5" rows="3"></textarea>
+      </div>
+
+      <button type="button" class="btn btn-primary btn-lg" dd-click="saveOptions()">Save Options</button>
+    </form>
+
+    <p class="alert alert-success mt-3" dd-visible="$model.okMsg" dd-text="$model.okMsg"></p>
+
+  </div>
+
   <script type="module" src="./opt.js"></script>
 </body>
 

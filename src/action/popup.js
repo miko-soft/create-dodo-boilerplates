@@ -1,4 +1,4 @@
-import 'bootstrap';
+import 'bootstrap'; // import bootstrap.js
 import { AppOne } from '@mikosoft/dodo';
 
 // conf
@@ -8,7 +8,7 @@ import { $httpClient, $debugOpts } from './conf/index.js';
 import PopupCtrl from './controllers/PopupCtrl.js';
 
 // app
-const appOne = new AppOne('myChromeExtension');
+const appOne = new AppOne('ChromeExtensionActionPopup');
 appOne
   .httpClient($httpClient)
   .debug($debugOpts)

@@ -2,6 +2,7 @@ import { Controller, corelib } from '@mikosoft/dodo';
 import nav from '/action/views/nav.html?raw';
 import main from '/action/views/main.html?raw';
 import messenger from '../../_libs/messenger.js';
+import ChromeStorage from '../../_libs/ChromeStorage.js';
 
 export default class PopupCtrl extends Controller {
 
@@ -28,6 +29,8 @@ export default class PopupCtrl extends Controller {
       if (route.includes('/action/showmessage'))
         this._showInfoMsg(payload);
     });
+
+    this.chromeStorage = new ChromeStorage('local');
   }
 
 
@@ -48,6 +51,13 @@ export default class PopupCtrl extends Controller {
     };
     const response = await messenger.sendMsg(message, 'content_scripts');
     this._showInfoMsg(response);
+  }
+
+
+  async showOptions() {
+    const options = await this.chromeStorage.get(['opt1', 'opt2', 'opt3', 'opt4', 'opt5']);
+    console.log('showOptions::', options);
+    this._showInfoMsg(JSON.stringify(options));
   }
 
 

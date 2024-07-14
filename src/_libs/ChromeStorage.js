@@ -6,7 +6,8 @@ export default class ChromeStorage {
   /**
    * @param {string} storageType - local, session, sync, managed - https://developer.chrome.com/docs/extensions/reference/api/storage#property-sync
    */
-  constructor(storageType = 'sync') {
+  constructor(storageType = 'local') {
+    if (!chrome.storage) { throw new Error('The chrome.storage is not defined. Check if you are running this script out of chrome browser environment.'); }
     this.storageType = storageType;
   }
 
