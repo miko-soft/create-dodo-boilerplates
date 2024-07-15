@@ -9,6 +9,6 @@
   <br>
 <h4>ElectronJS Processes</h4>
 <ul style="font-size:smaller">
-  <li dd-foreach="$fridge.processes --process"><b>${process.name}</b>: ${process.ver}</li>
+  <li dd-each="$fridge.processes --process"><b>{{process.name}}</b>: {{process.ver}}</li>
 </ul>
 </p>

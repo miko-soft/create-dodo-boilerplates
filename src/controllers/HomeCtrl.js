@@ -12,9 +12,7 @@ export default class HomeCtrl extends Controller {
   }
 
   async __loader(trx) {
-    this.setTitle('DoDo - Single Page App Framework');
-    this.setDescription('DoDo is JS framework for single page applications.');
-    this.setKeywords('dodo, framework, javascript, js, single page app, spa');
+    this.setTitle('DoDo ElectronJS Desktop App');
     this.setLang('en');
     this.loadView('#navbar', navbar);
     this.loadView('#main', homeMain);
@@ -49,7 +47,6 @@ export default class HomeCtrl extends Controller {
 
   async listenElectronMain() {
     this.ipcRenderer.once('versions-info', (event, processes) => {
-      this.$fridge.processes = [];
       for (const [name, ver] of Object.entries(processes)) {
         this.$fridge.processes.push({ name, ver });
         // console.log(`${name}: ${ver}`);

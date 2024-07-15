@@ -18,6 +18,7 @@ const $routes = [
 // app
 const app = new App('electroncl window.ipcrendererDodoApp');
 app
+  .fridge({ processes: [] })
   .auth($auth)
   .httpClient($httpClient)
   .debug($debugOpts);
