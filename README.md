@@ -32,6 +32,11 @@ $ npm run build
 After succesful build, open chrome://extensions and upload the content of /dist/ folder.
 
 
+### dodoApp
+The dodoApp is single page application within chrome extension and it can be used for more complex chrome extensions.
+Open new tab and enter URL chrome://extensionID/dodoApp/index.html (It will redirect to dodoApp home chrome://extensionID/ )
+
+
 
 ### Licence
 Copyright (c) MikoSoft licensed under [MIT](./LICENSE).
