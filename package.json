@@ -21,8 +21,7 @@
   "dependencies": {
     "@mikosoft/dodo": "~0.9.0",
     "bootstrap": "^5.3.3",
-    "font-awesome": "^4.7.0",
-    "jquery": "^3.7.1"
+    "font-awesome": "^4.7.0"
   },
   "devDependencies": {
     "sass": "^1.62.1",
