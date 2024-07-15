@@ -5,14 +5,13 @@
 ## Installation
 To start a new project is very straightforward
 ```bash
-$ npm init dodo
+$ npm init dodo@latest
 ```
 
 
 ## Development
 ```bash
 $ cd [projectName]
-$ npm install   or   $ npm run inst
 $ npm run start
 ```
 
