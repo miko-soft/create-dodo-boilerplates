@@ -23,7 +23,7 @@
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0",
-    "@mikosoft/dodo": "~0.8.11"
+    "@mikosoft/dodo": "~0.9.0"
   },
   "devDependencies": {
     "@electron-forge/cli": "^6.4.2",
