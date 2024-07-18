@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@mikosoft/dodo": "~0.9.0",
-    "@mikosoft/spa-server": "^1.2.0"
+    "@mikosoft/spa-server": "^2.0.0"
   },
   "devDependencies": {
     "sass": "^1.62.1",
