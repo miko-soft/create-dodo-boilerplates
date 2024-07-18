@@ -24,7 +24,7 @@ const httpOpts = {
     document.body.appendChild(script);
   },
   debug: false,
-  debugHTML: true
+  debugHTML: false
 };
 const httpServer = new HTTPServer(httpOpts);
 httpServer.start();
