@@ -2,39 +2,14 @@
 > This repository contains boilerplates (code templates) to start a new single page app with the [DoDo framework](http://dodo.mikosoft.info).
 
 
-## Installation
-To start a new chrome extension project is very straightforward
-```bash
-$ npm init dodo
-```
-Select "Chrome Extension" option.
-
-
-## Action Popup Development
-```bash
-$ npm run dev-action
-```
-Open the app in browser: http://127.0.0.1:9888/action/popup.html
-
-
-## Options Development
-```bash
-$ npm run dev-options
-```
-Open the app in browser: http://127.0.0.1:9888/options/opt.html
-
-
-## Build
-To build complete chrome extension run:
-```bash
-$ npm run build
-```
-After succesful build, open chrome://extensions and upload the content of /dist/ folder.
-
-
-### dodoApp
-The dodoApp is single page application within chrome extension and it can be used for more complex chrome extensions.
-Open new tab and enter URL chrome://extensionID/dodoApp/index.html (It will redirect to dodoApp home chrome://extensionID/ )
+## Boilerplate Templates
+The DoDo Framework boilerplate templates are organized within the [https://github.com/miko-soft/create-dodo-boilerplates](create-dodo-boilerplates) repository, each residing in distinct branches.
+Choose from a variety of code boilerplate templates to kickstart your project with Dodo:
+- **One Page App** -- *appOne* - Start an One Page Application with a single controller and no routes. (OPA)
+- **Single Page App** -- *spa* - Effortlessly begin building browser-based Single Page Application (SPA)
+- **ElectronJS Desktop App** -- *desktop-electronforge* - Initiate the development of desktop applications using the Dodo framework with ElectronJS Forge integration. (DEA)
+- **Chrome Extension** -- *extension-chrome* - Craft chrome extensions designed to operate within the Chrome browser. (ECA)
+- *Cordova Mobile App* -- *mobile-cordova* - Quickly launch cross-platform mobile applications with Cordova and Dodo. (IN DEVELOPMENT)
 
 
 
