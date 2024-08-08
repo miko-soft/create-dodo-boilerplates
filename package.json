@@ -19,7 +19,7 @@
     "build": "vite build --config vite.options.js && vite build --config vite.action.js && vite build --config vite.content_scripts.js && vite build --config vite.background.js && vite build --config vite.dodoApp.js"
   },
   "dependencies": {
-    "@mikosoft/dodo": "~0.9.0",
+    "@mikosoft/dodo": "~0.9.5",
     "bootstrap": "^5.3.3",
     "font-awesome": "^4.7.0"
   },
