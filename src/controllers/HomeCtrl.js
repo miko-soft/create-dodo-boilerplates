@@ -2,7 +2,6 @@ import { Controller, corelib } from '@mikosoft/dodo';
 import navbar from '../views/inc/navbar.html?raw';
 import mainHome from '../views/pages/mainHome.html?raw';
 import mainPage1 from '../views/pages/mainPage1.html?raw';
-import footer from '../views/inc/footer.html?raw';
 
 
 
@@ -20,7 +19,6 @@ export default class HomeCtrl extends Controller {
     this.setLang('en');
     this.loadView('#navbar', navbar);
     this.loadView('#main', mainHome);
-    this.loadView('#footer', footer);
   }
 
   async __init() {

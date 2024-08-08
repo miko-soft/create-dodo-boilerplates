@@ -2,6 +2,21 @@
 
 <h4>dd-each</h4>
 <ul>
-  <li dd-each="$model.posts --post,key">key:{{key}} || {{post.id}} | {{post.title}} | <small>{{post.body}}</small></li>
+  <li dd-each="$model.posts --post,key">
+    <b dd-text="({{key}} + 1)"></b>. {{post.title}}
+    <br> <small>{{post.body}}</small>
+  </li>
 </ul>
 </div>
+
+<style scoped>
+  li {
+    font-size: smaller;
+    margin-top: 21px;
+    list-style: none;
+  }
+
+  li>small {
+    margin-left: 34px;
+  }
+</style>
