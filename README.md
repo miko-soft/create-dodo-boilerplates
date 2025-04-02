@@ -12,6 +12,22 @@ Choose from a variety of code boilerplate templates to kickstart your project wi
 - *Cordova Mobile App* -- *mobile-cordova* - Quickly launch cross-platform mobile applications with Cordova and Dodo. (IN DEVELOPMENT)
 
 
+### Chrome Extension
+**options** design development
+```bash
+$ npm run dev-options
+```
+http://127.0.0.1:9889/options/opt.html
+
+
+**action** design development
+```bash
+$ npm run dev-action
+```
+http://127.0.0.1:9888/action/popup.html
+
+
+
 
 ### Licence
 Copyright (c) MikoSoft licensed under [MIT](./LICENSE).
