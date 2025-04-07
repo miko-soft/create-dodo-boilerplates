@@ -16,16 +16,14 @@ const sendMsg = async (message, destination) => {
     } else if (destination === 'content_scripts') {
       const tabs = await chrome.tabs.query({ active: true, currentWindow: true });
       const activeTab = tabs[0]; // Query for the active tab in the current window
+      if (!activeTab?.id) { throw new Error('messengerERR: No active tab ID found.'); }
       response = activeTab.id ? await chrome.tabs.sendMessage(activeTab.id, message) : undefined;
     }
 
-    if (chrome.runtime.lastError) {
-      throw new Error(chrome.runtime.lastError);
-    } else {
-      return response;
-    }
+    if (chrome.runtime.lastError) { throw new Error(chrome.runtime.lastError); }
+    else { return response; }
   } catch (error) {
-    console.error('_sendMsgERR::', error);
+    console.error('messengerERR::', error);
   }
 };
 
@@ -38,5 +36,15 @@ const listenMsgs = (cb) => {
 };
 
 
-const messenger = { sendMsg, listenMsgs };
+/**
+ * Stop listening a chrome messages.
+ */
+const unlistenMsgs = (cb) => {
+  chrome.runtime?.onMessage.removeListener(cb);
+};
+
+
+
+
+const messenger = { sendMsg, listenMsgs, unlistenMsgs };
 export default messenger;
