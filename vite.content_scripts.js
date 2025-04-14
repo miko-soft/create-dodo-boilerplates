@@ -18,6 +18,7 @@ export default {
         // chunkFileNames: 'content_scripts/[name].js',
         // assetFileNames: 'content_scripts/[name].js'
       }
-    }
+    },
+    minify: false
   }
 };

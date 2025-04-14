@@ -18,6 +18,7 @@ export default {
         // chunkFileNames: 'background/[name].js',
         // assetFileNames: 'background/[name].js'
       }
-    }
+    },
+    minify: false
   }
 };

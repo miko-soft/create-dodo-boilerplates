@@ -23,26 +23,33 @@ const sendMsg = async (message, destination) => {
     if (chrome.runtime.lastError) { throw new Error(chrome.runtime.lastError); }
     else { return response; }
   } catch (error) {
-    console.error('messengerERR::', error);
+    console.error('messengerERR::', error, message);
   }
 };
 
 
 /**
- * Listen for a chrome messages.
+ * Listen for chrome messages.
+ * @param {Function} cb - Callback function to handle messages.
  */
 const listenMsgs = (cb) => {
+  if (typeof cb !== 'function') {
+    throw new Error('messengerERR: Callback must be a function.');
+  }
   chrome.runtime?.onMessage.addListener(cb);
 };
 
 
 /**
- * Stop listening a chrome messages.
+ * Stop listening for chrome messages.
+ * @param {Function} cb - Callback function to remove.
  */
 const unlistenMsgs = (cb) => {
+  if (typeof cb !== 'function') {
+    throw new Error('messengerERR: Callback must be a function.');
+  }
   chrome.runtime?.onMessage.removeListener(cb);
 };
-
 
 
 

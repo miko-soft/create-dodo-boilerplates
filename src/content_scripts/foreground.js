@@ -1,6 +1,6 @@
 import messenger from '../_libs/messenger.js';
 
-console.log('[content_scripts/foreground.js] - forground script works !');
+console.log('[content_scripts/foreground.js] - content script works !');
 
 
 messenger.listenMsgs(async (request, sender, sendResponse) => {

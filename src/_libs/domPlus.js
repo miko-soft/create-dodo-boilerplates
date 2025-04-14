@@ -9,7 +9,6 @@ const waitForDOMLoad = (timeout) => {
       const timer = setTimeout(() => {
         reject(new Error('Timeout waiting for DOMContentLoaded'));
       }, timeout);
-
       document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(timer);
         resolve();
@@ -19,7 +18,13 @@ const waitForDOMLoad = (timeout) => {
 };
 
 
-
+/**
+ * Wait for CSS selector to load on page.
+ * @param {string} selector - CSS selector, for example input#username
+ * @param {number} timeout - the timeout in miliseconds
+ * @param {appear|disappear} tip - appear means wait for selector to apper on page; disappear means wait for CSS selector to disappear from the page
+ * @returns {void}
+ */
 const waitForSelector = (selector, timeout, tip = 'appear') => {
   return new Promise((resolve, reject) => {
     const startTime = Date.now();
