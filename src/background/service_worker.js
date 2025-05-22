@@ -3,7 +3,10 @@
 import apiCaller from '../_libs/apiCaller';
 import messenger from '../_libs/messenger.js';
 
+const env = import.meta.env;
+
 console.log('[background/sevice_worker.js] - service worker script works !');
+console.log('env::', env);
 
 
 messenger.listenMsgs(async (request, sender, sendResponse) => {

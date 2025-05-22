@@ -3,6 +3,7 @@ import { resolve } from 'path';
 export default {
   root: 'src',
   mode: 'development',
+  envPrefix: 'DODO_',
   publicDir: 'public', // relative to root
   build: {
     outDir: '../dist',
