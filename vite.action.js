@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: 'src',
-  mode: 'development',
+  // mode: 'development', // use --mode command option instead
   envPrefix: 'DODO_',
   // publicDir: '', // relative to root
   build: {

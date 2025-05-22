@@ -2,7 +2,7 @@ import { resolve } from 'path';
 
 export default {
   root: 'src',
-  mode: 'development',
+  // mode: 'development', // use --mode command option instead
   envPrefix: 'DODO_',
   publicDir: 'public', // relative to root
   build: {
