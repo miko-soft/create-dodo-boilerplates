@@ -1,0 +1,51 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #fcfcfc;
+}
+
+main {
+  font: 21px Arial;
+  padding: 34px 55px;
+
+  & b {
+    color: magenta;
+  }
+
+  &>h1 {
+    text-align: center;
+    font-family: Verdana;
+    color: #663919;
+  }
+
+  &>h4 {
+    text-align: center;
+    font-family: Verdana;
+    color: #663919;
+  }
+
+  li {
+    margin: 10px 0;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    list-style-type: none;
+
+    &>span {
+      font-weight: bold;
+      color: #333;
+    }
+
+    &>a {
+      color: #007bff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

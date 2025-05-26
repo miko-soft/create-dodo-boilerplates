@@ -11,12 +11,22 @@
   <meta name="robots" content="index,follow">
   <meta name="googlebot" content="index,follow">
   <link rel="shortcut icon" href="/favicon.png" type="image/png">
-  <link rel="stylesheet" type="text/css" href="/styles.scss">
+  <link rel="stylesheet" type="text/css" href="/app.scss">
 </head>
 
 <body>
-  <nav dd-view="#navbar"></nav>
-  <main dd-view="#main"></main>
+  <main dd-selfview>
+    <h1>App One</h1>
+    <p>Application with one page.</p>
+
+    <h4 style="margin-top:13px">dd-each</h4>
+    <ul>
+      <li dd-each="$model.posts --post,key">
+        <b dd-text="({{key}} + 1)"></b>. {{post.title}}
+        <br> <small>{{post.body}}</small>
+      </li>
+    </ul>
+  </main>
 
   <script type="module" src="app.js"></script>
 </body>
