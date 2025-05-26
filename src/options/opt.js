@@ -13,6 +13,7 @@ export default class OptionsCtrl extends Controller {
   async __loader(trx) {
     this.setTitle('Options');
     this.setLang('en');
+    this.loadSelfview(); // hide all dd-... elements
   }
 
   async __init(trx) {
