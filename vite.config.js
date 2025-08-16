@@ -22,5 +22,5 @@ export default defineConfig({
     outDir: '../dist',
     assetsDir: 'dodoBuild',
     emptyOutDir: true
-  },
+  }
 });
