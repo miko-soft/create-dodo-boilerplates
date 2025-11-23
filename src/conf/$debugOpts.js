@@ -26,6 +26,7 @@ const $debugOpts = {
   ddClass: false,
   ddStyle: false,
   ddSrc: false,
+  ddlabel: false,
   ddAttr: false,
 
   // DdCloners.js
