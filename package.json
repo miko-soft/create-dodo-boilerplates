@@ -20,11 +20,13 @@
     "nodemon": "nodemon server"
   },
   "dependencies": {
-    "@mikosoft/dodo": "~0.9.17",
-    "@mikosoft/spa-server": "^2.0.2"
+    "@mikosoft/dodo": "~0.9.24",
+    "@mikosoft/spa-server": "^2.1.0"
   },
   "devDependencies": {
-    "sass": "^1.90.0",
+    "autoprefixer": "^10.4.22",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
     "vite": "^6.3.5"
   }
 }
