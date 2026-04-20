@@ -20,7 +20,7 @@
     "nodemon": "nodemon server"
   },
   "dependencies": {
-    "@mikosoft/dodo": "~0.9.24",
+    "@mikosoft/dodo": "^1.0.0",
     "@mikosoft/spa-server": "^2.1.0"
   },
   "devDependencies": {
